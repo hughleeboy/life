@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+html,
+#root,
+body
+{
+height:100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* grid */
+#gridContainer {
+	display: grid;
+	height:100%;
+	width:90%;
+	float:left;
+	background-color:#ab8b74;
+}
+.grid-item {
+	margin:1px;
+}
+.grid-item.alive {
+	background-color:#ffe4a3;
+}
+.grid-item.dead {
+	background-color:#765848;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* panel */
+#sidePanel {
+	width:10%;
+	height:100%;
+	position:absolute;
+	right:0px;
+	background-color:#ab8b74;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button {
+	background-color: #ffe4a3;
+	margin-bottom: 5px;
+	border: none;
+	color: black;
+	padding: 15px 0px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	width: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+.button.label {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button.half {
+	width: 50%;
 }
